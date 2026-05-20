@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+  --webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -10,6 +11,15 @@ html {
   --color-gray-700: hsl(270deg 12% 58%);
   --color-gray-900: hsl(270deg 22% 12%);
   --color-gray-1000: hsl(270deg 20% 8%);
+  --weight-thin: 100;
+  --weight-extra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+  --weight-extra-bold: 800;
+  --weight-black: 900;
 }
 
 html,
@@ -36,6 +46,8 @@ footer {
   justify-content: space-between;
   max-width: calc(1200 / 16 * 1rem);
   margin: 0 auto;
+  font-weight: var(--weight-regular);
+  font-size: 1rem;
 }
 
 .meta {
@@ -46,25 +58,44 @@ footer {
 .logo {
   font-size: 2rem;
   margin-bottom: 16px;
+  color: white;
+  font-weight: var(--weight-black);
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.sublogo {
+  color: var(--color-gray-500);
+  font-style: italic;
+}
+
+.person-name {
+  color: var(--color-gray-300);
+  font-weight: var(--weight-bold);
 }
 
 .legal {
   margin-top: auto;
+  color: var(--color-gray-700);
 }
 
 .links {
   display: flex;
   gap: 64px;
+
 }
 
 .links h2 {
   margin-bottom: 24px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--color-gray-700);
+  font-weight: var(--weight-bold);
 }
 
 .links li {
-  margin: 16px 0;
+  margin: 1rem 0;
 }
 
 .links li:last-of-type {
@@ -73,7 +104,10 @@ footer {
 
 .links a {
   text-decoration: none;
+  color: var(--color-gray-100);
 }
+
+
 
 main {
   flex: 1;
